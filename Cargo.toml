@@ -1,0 +1,10 @@
+[package]
+name = "olinker"
+version = "0.1.0"
+edition = "2021"
+license-file = "LICENSE"
+description = "A library natively linking ollama and rust code"
+repository = "https://github.com/mcmah309/olinker"
+readme = "README.md"
+
+[dependencies]
