@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 use serde::{Deserialize, Serialize};
 
 use crate::Ollama;
@@ -91,14 +93,14 @@ impl Ollama {
 pub struct CreateModelRequest {
     #[serde(rename = "name")]
     model_name: String,
-    path: Option<String>,
+    path: Option<PathBuf>,
     modelfile: Option<String>,
     stream: bool,
 }
 
 impl CreateModelRequest {
     /// Create a model described in the Modelfile at `path`.
-    pub fn path(model_name: String, path: String) -> Self {
+    pub fn path(model_name: String, path: PathBuf) -> Self {
         Self {
             model_name,
             path: Some(path),
